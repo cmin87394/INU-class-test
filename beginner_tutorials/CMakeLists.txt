@@ -153,6 +153,14 @@ add_executable(pub_advanced_test_ros_node
 target_link_libraries(pub_advanced_test_ros_node ${catkin_LIBRARIES})
 add_dependencies(pub_advanced_test_ros_node ${catkin_EXPORTED_TARGETS})
 
+add_executable(sub_advanced_test_ros_node
+  include/sub_advanced_test_ros.h
+  lib/sub_advanced_test_ros.cpp 
+  src/main_advanced_sub.cpp
+)
+target_link_libraries(sub_advanced_test_ros_node ${catkin_LIBRARIES})
+add_dependencies(sub_advanced_test_ros_node ${catkin_EXPORTED_TARGETS})
+
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/beginner_tutorials.cpp
