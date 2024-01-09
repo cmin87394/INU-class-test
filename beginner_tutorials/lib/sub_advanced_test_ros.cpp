@@ -59,6 +59,7 @@ void SubAdvancedTestNode::SubAdvancedTestFunc()
       ROS_INFO("vecRectArray:vectRectInfo[%d].fHeight:(%.4f)", i, vecRectArray_[0].vecRectArray[i].fHeight);
       ROS_INFO("vecRectArray:vectRectInfo[%d].fScore:(%.4f)", i, vecRectArray_[0].vecRectArray[i].fScore);
     }
+    bRectArraybLoop = false;
   }
 }
 
