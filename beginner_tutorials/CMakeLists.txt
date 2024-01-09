@@ -127,9 +127,24 @@ add_executable(hello_world_ros_node
   lib/hello_world_ros.cpp 
   src/main_hello_world_ros_node.cpp
 )
-
 target_link_libraries(hello_world_ros_node ${catkin_LIBRARIES})
 add_dependencies(hello_world_ros_node ${catkin_EXPORTED_TARGETS})
+
+add_executable(pub_basic_test_ros_node 
+  include/pub_basic_test_ros.h
+  lib/pub_basic_test_ros.cpp 
+  src/main_basic_pub.cpp
+)
+target_link_libraries(pub_basic_test_ros_node ${catkin_LIBRARIES})
+add_dependencies(pub_basic_test_ros_node ${catkin_EXPORTED_TARGETS})
+
+add_executable(sub_basic_test_ros_node 
+  include/sub_basic_test_ros.h
+  lib/sub_basic_test_ros.cpp 
+  src/main_basic_sub.cpp
+)
+target_link_libraries(sub_basic_test_ros_node ${catkin_LIBRARIES})
+add_dependencies(sub_basic_test_ros_node ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
