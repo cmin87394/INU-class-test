@@ -1,0 +1,12 @@
+[Unit]
+Description=roscore
+
+[Service]
+ExecStartPre=/bin/sleep 10
+ExecStart=/usr/bin/python3 /opt/ros/noetic/bin/roscore
+EnvironmentFile=/etc/cmin_env
+Restart=on-abort
+RestartSec=5
+
+[Install]
+WantedBy=default.target

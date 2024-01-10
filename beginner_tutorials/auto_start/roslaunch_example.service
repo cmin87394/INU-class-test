@@ -1,0 +1,11 @@
+[Unit]
+Description=roslaunch_example
+After=roscore.service
+
+[Service]
+ExecStartPre=/bin/sleep 10
+ExecStart=/opt/ros/noetic/bin/roslaunch beginner_tutorials hello_world_node.launch --wait
+EnvironmentFile=/etc/cmin_env
+
+[Install]
+WantedBy=default.target
